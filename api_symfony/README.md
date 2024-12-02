@@ -1,6 +1,6 @@
-# TEST RECRUTEMENT DEV TEACH’R 2024 Mohsen Hosen
+# TEST RECRUTEMENT DEV TEACH’R 2024 Mohsen Hosen partie 1
 
-## Installation du projet
+## Installation de Symfony
 ### Prérequis
 
 - Php
@@ -19,7 +19,7 @@ git@github.com:HosenMohsen/gestion-produits-categories.git
 composer create-project symfony/skeleton api_symfony
 cd api_symfony
 composer require api symfony/orm-pack symfony/validator symfony/serializer-pack
-composer require api symfony/orm-pack symfony/validator symfony/serializer-pack
+composer require symfony/maker-bundle --dev
 ```
 
 
