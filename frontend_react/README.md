@@ -1,8 +1,35 @@
-# React + Vite
+# TEST RECRUTEMENT DEV TEACH’R 2024 Mohsen Hosen partie 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation de la partie front du projet
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Installation React avec vite
+
+```bash
+
+npm create vite@latest
+npm install
+
+```
+
+### Lancement
+
+
+```bash
+
+npm run dev
+
+```
+
+### Installation tailwind
+
+```bash
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+npm install -D postcss
+npx tailwindcss -i ./src/index.css -o ./src/output.css --watch 
+```
+
+
+
