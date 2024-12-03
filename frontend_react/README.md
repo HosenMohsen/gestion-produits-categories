@@ -31,5 +31,14 @@ npm install -D postcss
 npx tailwindcss -i ./src/index.css -o ./src/output.css --watch 
 ```
 
+### Installation de Axios pour l'affichage des données et les opérations CRUD 
+
+```bash
+
+npm install axios 
+
+```
 
 
+
+    

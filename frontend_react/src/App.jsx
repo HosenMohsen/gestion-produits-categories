@@ -1,10 +1,30 @@
 import './output.css';
+import ProductTable from "./components/ProductTable";
+import CategorieTable from './components/CategorieTable';
 
 
-export default function App() {
+function App() {
   return (
-    <div className="h-screen flex items-center justify-center bg-blue-500">
-      <h1 className="text-white text-4xl font-bold">Hello Tailwind CSS!</h1>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Liste des Produits</h1>
+      <ProductTable />
     </div>
+
+    
   );
 }
+
+function App2() {
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Liste des Catégories</h1>
+      <CategorieTable />
+    </div>
+
+    
+  );
+}
+
+
+export default App;
+export { App2 };
