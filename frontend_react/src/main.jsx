@@ -4,6 +4,7 @@ import './index.css'
 import App, { AjoutProduit } from './App.jsx'
 import { App2, AjoutCategorie} from './App.jsx'
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

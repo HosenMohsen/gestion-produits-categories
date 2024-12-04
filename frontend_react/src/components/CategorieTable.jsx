@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { getCategories, deleteCategory } from "../services/api";
+import ModifyCategory from "./ModifyCategory";
 
 export default function CategorieTable() {
   const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null); 
+  const [isEditing, setIsEditing] = useState(false); 
+
 
   useEffect(() => { 
     fetchCategories();
@@ -29,7 +33,19 @@ export default function CategorieTable() {
     }
   };
 
+
+  const handleEdit = (categorie) => {
+    setSelectedCategory(categorie);
+    setIsEditing(true); 
+  };
+
+  const handleSuccess = () => {
+    fetchCategories(); 
+    setIsEditing(false); 
+  };
+
   return (
+    <div>
     <table className="table-auto w-full border-collapse border border-gray-300">
       <thead>
         <tr className="bg-gray-100">
@@ -45,6 +61,12 @@ export default function CategorieTable() {
                     <td className="border border-gray-300 px-4 py-2">{categorie.id}</td>
                     <td className="border border-gray-300 px-4 py-2">{categorie.nom}</td>
                     <td className="border border-gray-300 px-4 py-2">
+                    <button
+                    className="text-blue-500 hover:text-blue-700 mr-4"
+                    onClick={() => handleEdit(categorie)} 
+                  >
+                    Modifier
+                  </button>
                     <button
                         className="text-red-500 hover:text-red-700"
                         onClick={() => handleDelete(categorie.id)}
@@ -64,5 +86,11 @@ export default function CategorieTable() {
         </tbody>
 
     </table>
+
+
+    {isEditing && selectedCategory && (
+        <ModifyCategory product={selectedCategory} onSuccess={handleSuccess} />
+      )}
+    </div>
   );
 }
