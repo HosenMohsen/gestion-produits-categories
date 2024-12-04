@@ -12,7 +12,7 @@ npm install
 
 ```
 
-### Lancement
+### Lancement de React 
 
 
 ```bash
@@ -28,14 +28,32 @@ npm run dev
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 npm install -D postcss
-npx tailwindcss -i ./src/index.css -o ./src/output.css --watch 
+
+
 ```
+
+### Lancement tailwind 
+
+```bash
+
+npx tailwindcss -i ./src/index.css -o ./src/output.css --watch 
+
+```
+
 
 ### Installation de Axios pour l'affichage des données et les opérations CRUD 
 
 ```bash
 
 npm install axios 
+
+```
+
+### Installation de Router pour la navigation de pages
+
+```bash
+
+npm install react-router-dom
 
 ```
 

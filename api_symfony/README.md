@@ -7,11 +7,6 @@
 - Composer
 - Base de donnée (mysql)
 
-### Clonage du projet
-
-```bash
-git@github.com:HosenMohsen/gestion-produits-categories.git
-```
 
 ### Installation 
 
@@ -20,6 +15,25 @@ composer create-project symfony/skeleton api_symfony
 cd api_symfony
 composer require api symfony/orm-pack symfony/validator symfony/serializer-pack
 composer require symfony/maker-bundle --dev
+```
+
+### Création de l'api/bdd
+
+```bash
+php bin/console make:entity
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+
+```
+
+
+
+### Lancement de Symfony en http
+
+```bash
+
+symfony server:start --no-tls
+
 ```
 
 
@@ -66,3 +80,10 @@ composer require symfony/maker-bundle --dev
 #### `DELETE /api/produits/{id}` : Supprimer le produit selon son id 
 #### `DELETE /api/categories/{id}` : Suprrimer la catégorie selon son id 
 
+
+
+
+
+#### SQL
+
+Un fichier sql de la BDD est disponible dans le dossier sql 
