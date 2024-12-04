@@ -3,13 +3,28 @@ import ProductTable from "./components/ProductTable";
 import CategorieTable from './components/CategorieTable';
 import ProductForm from './components/ProductForm';
 import CategoryForm from './components/CategoryForm';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from './components/Header';
+import ProductsPage from './pages/ProductsPage';
+import CategoriesPage from './pages/CategoriesPage';
+import Home from './pages/Home';
 
+function Nav() {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+      <Route path="/" element={<Home />} />
+       <Route path="/products" element={<ProductsPage />} />
+        <Route path="/categories" element={<CategoriesPage />} />  
+      </Routes>
+    </Router>
+  );
+}
 
-
-function App() {
+function ProduitTable() {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Liste des Produits</h1>
       <ProductTable />
     </div>
 
@@ -17,10 +32,9 @@ function App() {
   );
 }
 
-function App2() {
+function CategoryTable() {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Liste des Catégories</h1>
       <CategorieTable />
     </div>
 
@@ -59,5 +73,4 @@ function AjoutCategorie() {
 
 
 
-export default App;
-export { App2, AjoutProduit, AjoutCategorie };
+export { CategoryTable, AjoutProduit, AjoutCategorie, Nav, ProduitTable };

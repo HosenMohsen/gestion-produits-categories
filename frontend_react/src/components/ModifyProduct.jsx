@@ -35,8 +35,8 @@ const ModifyProduct = ({ product, onSuccess }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md">
-      <h2 className="text-2xl font-bold mb-6 text-center">Modifier le Produit</h2>
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-[#f9f9f9] shadow-md rounded-md">
+      <h2 className="text-2xl font-bold mb-6 text-center">Modifier le produit</h2>
       
       <div className="mb-4">
         <label className="block text-gray-700 font-medium mb-2">Nom :</label>
@@ -100,7 +100,7 @@ const ModifyProduct = ({ product, onSuccess }) => {
       
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full bg-text-color text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         Modifier
       </button>

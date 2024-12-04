@@ -43,7 +43,7 @@ export default function ProductTable() {
     <div>
       <table className="table-auto w-full border-collapse border border-gray-300">
         <thead>
-          <tr className="bg-gray-100">
+          <tr className="bg-text-color text-gradient1 ">
             <th className="border border-gray-300 px-4 py-2">ID</th>
             <th className="border border-gray-300 px-4 py-2">Nom</th>
             <th className="border border-gray-300 px-4 py-2">Description</th>
